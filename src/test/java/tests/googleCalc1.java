@@ -16,6 +16,7 @@ public class googleCalc1 {
         WebDriver driver = new ChromeDriver();
         driver.get("http://google.com");
         driver.findElement(By.cssSelector("input.gLFyf.gsfi")).sendKeys("Калькулятор", Keys.ENTER);
+        driver.findElement(By.cssSelector("div[jsname='j93WEe']")).click();
         driver.quit();
 
 
