@@ -5,17 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-
 import static org.openqa.selenium.support.PageFactory.initElements;
 
 public class SearchPage1 {
 
     @FindBy (css="input.gLFyf.gsfi")
     private WebElement searchInput;
-
-    //поиск строки с выражением
-    @FindBy(css = "div[jsname='ubtiRe']")
-    public WebElement expression;
 
     //поиск (
     @FindBy(css = "div[jsname='j93WEe']")
@@ -153,13 +148,8 @@ public class SearchPage1 {
         six.click();
     }
 
-    public String getExp() {
-        return exp.getText();
-    }
-    public String getResult() {
-        return result.getText();
-    }
-
+    public String getExp() {return exp.getText();}
+    public String getResult() {return result.getText();}
 
     }
 

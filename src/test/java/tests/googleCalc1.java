@@ -12,8 +12,8 @@ public class googleCalc1 {
     private static WebDriver driver;
     private static SearchPage1 searchPage1;
 
-    @BeforeAll
-    public static void init() {
+    @BeforeEach
+    public void init() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         driver = new ChromeDriver();
         searchPage1 = new SearchPage1(driver);
@@ -65,8 +65,8 @@ public class googleCalc1 {
         assertEquals("Error", searchPage1.getResult());
     }
 
-    @AfterAll
-    public static void teardown() {
+    @AfterEach
+    public void teardown() {
         driver.quit();
     }
 }
