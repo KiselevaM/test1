@@ -54,8 +54,19 @@ public class googleCalc1 {
         assertEquals("Infinity", searchPage1.getResult());
     }
 
+    @Test
+    @DisplayName("Проверка ошибки при отсутствии значения")
+    public void test3() {
+        driver.get("http://google.com");
+        searchPage1.search("Калькулятор");
+        searchPage1.clicksin();// sin
+        searchPage1.clickequall();// =
+        assertEquals("sin() =", searchPage1.getExp());
+        assertEquals("Error", searchPage1.getResult());
+    }
+
     @AfterAll
     public static void teardown() {
-           driver.quit();
+        driver.quit();
     }
 }

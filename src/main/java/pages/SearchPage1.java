@@ -45,6 +45,10 @@ public class SearchPage1 {
     @FindBy(css = "div[jsname='Pt8tGc']")
     public WebElement equall;
 
+    //поиск sin
+    @FindBy(css = "div[jsname='aN1RFf']")
+    public WebElement sin;
+
     //поиск 0
     @FindBy(css = "div[jsname='bkEvMb']")
     public WebElement zero;
@@ -115,6 +119,10 @@ public class SearchPage1 {
 
     public void clickequall() {
         equall.click();
+    }
+
+    public void clicksin() {
+        sin.click();
     }
 
     public void clickzero() {
