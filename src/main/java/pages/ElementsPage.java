@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 import static org.openqa.selenium.support.PageFactory.initElements;
 
-public class SearchPage1 {
+public class ElementsPage {
 
     @FindBy (css="input.gLFyf.gsfi")
     private WebElement searchInput;
@@ -80,7 +80,7 @@ public class SearchPage1 {
     @FindBy(css="span[jsname='VssY5c']")
     private WebElement result;
 
-    public SearchPage1(WebDriver driver) {
+    public ElementsPage(WebDriver driver) {
     initElements(driver, this);
     }
 
