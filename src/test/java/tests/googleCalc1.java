@@ -1,14 +1,8 @@
 package tests;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pages.SearchPage;
 import pages.SearchPage1;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,7 +22,6 @@ public class googleCalc1 {
     @Test
     @DisplayName("Проверка операций с целыми числами")
     public void test1() {
-
         driver.get("http://google.com");
         searchPage1.search("Калькулятор");
         searchPage1.clickOpenBr(); //(
@@ -44,17 +37,25 @@ public class googleCalc1 {
         searchPage1.clickdivision();// /
         searchPage1.clickfive();// 5
         searchPage1.clickequall();// =
-
         assertEquals("(1 + 2) × 3 - 40 ÷ 5 =", searchPage1.getExp());
         assertEquals("1", searchPage1.getResult());
-
     }
 
+    @Test
+    @DisplayName("Проверка деления на 0")
+    public void test2() {
+        driver.get("http://google.com");
+        searchPage1.search("Калькулятор");
+        searchPage1.clicksix();// 6
+        searchPage1.clickdivision();// /
+        searchPage1.clickzero();// 0
+        searchPage1.clickequall();// =
+        assertEquals("6 ÷ 0 =", searchPage1.getExp());
+        assertEquals("Infinity", searchPage1.getResult());
+    }
 
     @AfterAll
     public static void teardown() {
            driver.quit();
     }
-
-
 }

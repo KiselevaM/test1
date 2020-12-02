@@ -69,6 +69,10 @@ public class SearchPage1 {
     @FindBy(css = "div[jsname='Ax5wH']")
     public WebElement five;
 
+    //поиск 6
+    @FindBy(css = "div[jsname='abcgof']")
+    public WebElement six;
+
     //поиск выражения
     @FindBy(css="span[jsname='ubtiRe']")
     private WebElement exp;
@@ -137,6 +141,10 @@ public class SearchPage1 {
         five.click();
     }
 
+    public void clicksix() {
+        six.click();
+    }
+
     public String getExp() {
         return exp.getText();
     }
@@ -145,7 +153,5 @@ public class SearchPage1 {
     }
 
 
-
-    // expression.
     }
 
