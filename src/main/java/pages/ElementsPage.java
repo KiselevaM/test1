@@ -73,7 +73,7 @@ public class ElementsPage {
     public WebElement six;
 
     //поиск выражения
-    @FindBy(css="span[jsname='ubtiRe']")
+    @FindBy(css="div[jsname='VkJw6']")
     private WebElement exp;
 
     //поиск результата
